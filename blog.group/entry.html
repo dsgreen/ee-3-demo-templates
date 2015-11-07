@@ -1,0 +1,41 @@
+
+{embed="includes/.header"}
+<div id="content" class="container">
+    <div class="row">
+
+        <main id="main" role="main" class="col-xs-12 col-sm-9">
+            <h1>Blog</h1>
+
+            {exp:channel:entries channel="blog" disable="member_data|pagination"}
+            <article class="post">
+                <header>
+                    <h2>{title}</h2>
+                    <p class="meta">
+                        <span class="date">{entry_date format='%F %j, %Y'}</span> /
+                        <span class="author">{author}</span>
+                    </p>
+                </header>
+                {content}
+                <footer>
+                    <p class="pull-left categories-ttl"><b>Categories:</b></p>
+                    <ul class="list-inline categories">
+                        {categories}
+                        <li><a href="{path='blog'}">{category_name}</a></li>
+                        {/categories}
+                    </ul>
+                </footer>
+            </article><!--/post-->
+            {/exp:channel:entries}
+
+        </main ><!--/main-->
+
+        <aside id="secondary" class="col-xs-12 col-sm-3" role="complementary" style="padding-top: 125px;">
+            {exp:channel:categories channel="blog" show_empty="no" class="list-unstyled"}<a href="{path='blog/index'}">{category_name}</a>{/exp:channel:categories}
+        </aside><!--/secondary-->
+
+    </div><!--/.row-->
+</div><!--/#content.container-->
+
+{embed="includes/.footer"}
+</body>
+</html>
