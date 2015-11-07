@@ -1,0 +1,25 @@
+
+{embed="includes/.header"}
+<div id="content" class="container">
+    <div class="row">
+
+        {exp:channel:entries channel="portfolio" disable="categories|member_data|pagination"}
+        <main id="main" role="main" class="col-xs-12 col-sm-9">
+            <h1>{title}</h1>
+            {details}
+            {images}
+                <img src="{images:image}" class="img-responsive"><br>
+            {/images}
+            </main>
+        </main ><!--/main-->
+
+        <aside id="secondary" class="col-xs-12 col-sm-3" role="complementary">
+        </aside><!--/secondary-->
+        {/exp:channel:entries}
+
+    </div><!--/.row-->
+</div><!--/#content.container-->
+
+{embed="includes/.footer"}
+</body>
+</html>

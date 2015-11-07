@@ -1,0 +1,23 @@
+
+{embed="includes/.header"}
+<div id="content" class="container">
+    <div class="row">
+
+        <main id="main" role="main" class="col-xs-12">
+            <h1>Portfolio</h1>
+            <div class="row thumbs">
+        {exp:channel:entries channel="portfolio" disable="categories|member_data|pagination"}
+                <div class="col-sm-4">
+                    <a href="{url_title_path='portfolio/detail'}"><img src="{port_featured_image}" class="img-responsive" alt="{title}"></a>
+                    <p class="small">{title}</p>
+                </div>
+        {/exp:channel:entries}
+            </div><!--/.row-->
+        </main><!--/main-->
+
+    </div><!--/.row-->
+</div><!--/#content.container-->
+
+{embed="includes/.footer"}
+</body>
+</html>
