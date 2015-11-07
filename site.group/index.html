@@ -3,17 +3,19 @@
 <div id="content" class="container">
     <div class="row">
 
-        <main id="main" role="main" class="col-xs-12 col-sm-9">
 {exp:channel:entries channel="site_content" disable="categories|member_data|pagination"}
+        <main id="main" role="main" class="col-xs-12 col-sm-9">
             <h1>{title}</h1>
             <!--<p class="lead"></p>-->
             {content}
-{/exp:channel:entries}
         </main ><!--/main-->
 
         <aside id="secondary" class="col-xs-12 col-sm-3" role="complementary">
-
+            {if featured_image != ''}
+            <img src="{featured_image}" class="img-responsive" style="margin-top: 30px;">
+            {/if}
         </aside><!--/secondary-->
+{/exp:channel:entries}
 
     </div><!--/.row-->
 </div><!--/#content.container-->
