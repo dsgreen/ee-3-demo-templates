@@ -8,11 +8,16 @@
             <div class="row thumbs">
         {exp:channel:entries channel="portfolio" disable="categories|member_data|pagination"}
                 <div class="col-sm-4">
-                    <a href="{url_title_path='portfolio/detail'}"><img src="{port_featured_image}" class="img-responsive" alt="{title}"></a>
+                    <a href="{url_title_path='portfolio/detail'}"><img src="{port_featured_image:thumb}" class="img-responsive" alt="{title}"></a>
                     <p class="small">{title}</p>
                 </div>
-        {/exp:channel:entries}
+            {if count == 3 || count == 6}
             </div><!--/.row-->
+            <div class="row thumbs">
+            {if:elseif count == 9}
+            </div><!--/.row-->
+            {/if}
+        {/exp:channel:entries}
         </main><!--/main-->
 
     </div><!--/.row-->
