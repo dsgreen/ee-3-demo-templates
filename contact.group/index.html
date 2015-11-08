@@ -1,0 +1,39 @@
+
+{embed="includes/.header"}
+<div id="content" class="container">
+    <div class="row">
+
+        <main id="main" role="main" class="col-xs-12 col-sm-9">
+            <h1>Contact</h1>
+            
+            {exp:email:contact_form user_recipients="false" recipients="info@example.com" replyto="yes" redirect="none" return="http://localhost|Return to the site" charset="utf-8"}
+            <div class="form-group">
+                <label for="email" class="hidden">Email</label>
+                <input type="email" id="email" name="from" placeholder="email" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="subject" class="hidden">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="subject" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="message" class="hidden">Message</label>
+                <textarea rows="8" cols="" name="message[]" id="message" class="form-control">message</textarea>
+            </div>
+
+            <div class="send">
+                <button type="submit" class="btn btn-default send">Send</button>
+            </div>
+            {/exp:email:contact_form}
+        </main><!--/main-->
+
+        <aside id="secondary" class="col-xs-12 col-sm-3" role="complementary">
+        </aside><!--/secondary-->
+
+    </div><!--/.row-->
+</div><!--/#content.container-->
+
+{embed="includes/.footer"}
+</body>
+</html>
