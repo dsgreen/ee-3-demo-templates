@@ -5,6 +5,9 @@
 
         <main id="main" role="main" class="col-xs-12 col-sm-9">
             <h1>Contact</h1>
+            {exp:channel:entries channel="site_content" entry_id="12"}
+                {content}
+            {/exp:channel:entries}
             
             {exp:email:contact_form user_recipients="false" recipients="info@example.com" replyto="yes" redirect="none" return="http://localhost|Return to the site" charset="utf-8"}
             <div class="form-group">
